@@ -1,22 +1,16 @@
 package activity;
 
-import com.mao.coolweather.R;
-import com.mao.coolweather.R.drawable;
-import com.mao.coolweather.R.id;
-import com.mao.coolweather.R.layout;
-import com.mao.coolweather.R.menu;
-import com.mao.coolweather.R.string;
-
-import android.app.Activity;
 import android.app.ActionBar;
+import android.app.Activity;
 import android.app.Fragment;
-import android.support.v4.app.ActionBarDrawerToggle;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -26,7 +20,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
+
+import com.mao.coolweather.R;
 
 /**
  * Fragment used for managing interactions for and presentation of a navigation
@@ -279,8 +274,8 @@ public class NavigationDrawerFragment extends Fragment {
 		}
 
 		if (item.getItemId() == R.id.action_example) {
-			Toast.makeText(getActivity(), "Example action.", Toast.LENGTH_SHORT)
-					.show();
+			//Toast.makeText(getActivity(), "Example action.", Toast.LENGTH_SHORT)
+				//	.show();
 			return true;
 		}
 

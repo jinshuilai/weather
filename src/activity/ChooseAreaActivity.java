@@ -16,7 +16,10 @@ import model.Province;
 import db.WeatherDB;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
@@ -87,6 +90,12 @@ public class ChooseAreaActivity extends Activity {
 				} else if (currentLevel == LEVEL_CITY) {
 					selectedCity = cityList.get(position);
 					queryCounties();
+				} else if (currentLevel == LEVEL_COUNTY) {
+					String countyCode = countyList.get(position).getCountyCode();
+					Intent intent = new Intent();
+					intent.putExtra("county_code", countyCode);
+					setResult(RESULT_OK, intent);
+					finish();
 				}
 			}
 		});
